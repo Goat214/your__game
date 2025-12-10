@@ -1,0 +1,205 @@
+
+/* --- Global styles --- */
+.oneq-page {
+    
+    text-align: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    min-height: 100vh; /* Fon rasmi to'liq chiqishi uchun */
+    background: #a6a6a6;
+    background: linear-gradient(180deg, rgba(166, 166, 166, 1) 24%, rgba(0, 0, 0, 1) 100%);
+  }
+  
+  /* --- Top bar (Tugmalar uchun joy) --- */
+  .top-bar {
+    display: flex;
+    justify-content: flex-end; /* O'ng tomonga joylashtirish */
+    gap: 15px;
+    padding: 10px;
+    position: absolute; /* Sahifaning yuqori o'ng burchagiga qotirish */
+    top: 20px;
+    right: 20px;
+    z-index: 10; /* Kartalar va boshqa narsalar ustida turishi uchun */
+  }
+  
+  .home-btnn,
+  .reset-btn {
+    padding: 10px 18px; /* Yaxshiroq ko'rinish uchun padding oshirildi */
+    font-size: 16px; /* Yaxshiroq o'qish uchun shrift kattalashtirildi */
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* --- Home Button CSS --- */
+  .home-btn {
+    background-color: #1e88e5; /* Moviy rang */
+    color: white;
+  }
+  
+  .home-btn:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* --- Reset Button CSS --- */
+  .reset-btn {
+    background-color: #f4511e; /* To'q sariq rang */
+    color: white;
+  }
+  
+  .reset-btn:hover {
+    background-color: #d84315;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* --- Page title --- */
+ 
+  
+  /* --- Cards Container --- */
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* Kartalar orasidagi masofa oshirildi */
+    margin-top: 20px;
+  }
+  
+  /* --- Question Card CSS --- */
+  .question-card {
+    position: relative;
+    width: 130px; /* Kartaning hajmi kattalashtirildi */
+    height: 130px; /* Kartaning hajmi kattalashtirildi */
+    background-color: rgba(0, 150, 0, 0.85); /* To'qroq yashil */
+    color: white;
+    font-size: 36px; /* Raqam kattalashtirildi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    transition: 0.3s ease-in-out;
+  }
+  
+  .question-card:hover {
+    transform: scale(1.05); /* Hover effekti kattalashtirildi */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+  }
+  
+  /* Ochilgan (Opened) Card CSS */
+  .opened {
+    background-color: rgba(108, 117, 125, 0.9); /* Yumshoq kulrang */
+    color: #eee;
+    pointer-events: none; /* Qayta bosishni o'chirish */
+  }
+  
+  .opened-label {
+    position: absolute;
+    top: -10px; /* Yuqoriga chiqarildi */
+    right: -10px; /* O'ngga chiqarildi */
+    font-size: 20px;
+    color: white;
+    background-color: #28a745; /* Yashil belgi foni */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* --- Modal --- */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #f8f9fa; /* Juda och kulrang fon */
+    color: #333;
+    padding: 40px 50px;
+    border-radius: 15px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: modalPopUp 0.3s ease-out;
+  }
+  
+  .modal-content h2 {
+    color: #1e88e5;
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+  
+  .modal-content p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .close-btn {
+    margin-top: 30px;
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .close-btn:hover {
+    background-color: #1565c0;
+  }
+  
+  /* Modal animatsiyasi */
+  @keyframes modalPopUp {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+
+  /* Savol kartalari uchun */
+.question-card {
+    /* ... boshqa uslublar ... */
+    /* Yashil rangda yumshoq glow */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(0, 255, 0, 0.3); /* Yengil chegara */
+  }
+  
+  /* Ochilgan kartalar uchun */
+  .opened {
+    /* ... boshqa uslublar ... */
+    /* Kulrang kartalar uchun yengil moviy glow */
+    box-shadow: 0 0 15px rgba(100, 100, 255, 0.2), 0 4px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Sarlavha uchun */
+  .page-title {
+    /* ... boshqa uslublar ... */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Oq shriftga yumshoq soya */
+  }  

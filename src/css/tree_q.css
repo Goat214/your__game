@@ -1,0 +1,103 @@
+.threeq-page {
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    color: white;
+  }
+  
+  /* Top Bar */
+  .threeq-top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .threeq-home-btn,
+  .threeq-reset-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .threeq-home-btn {
+    background: #ffffff33;
+  }
+  
+  .threeq-reset-btn {
+    background: #ff4b4b;
+  }
+  
+  /* Title */
+  .threeq-title {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  
+  /* Cards */
+  .threeq-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+  
+  .threeq-card {
+    background: rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+  }
+  
+  .threeq-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .threeq-opened {
+    border: 3px solid #4ade80;
+    color: #4ade80;
+  }
+  
+  .threeq-opened-label {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 18px;
+    color: #4ade80;
+  }
+  
+  /* Modal */
+  .threeq-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .threeq-modal-content {
+    background: white;
+    color: #333;
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+  }
+  
+  .threeq-close-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #4a00e0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  

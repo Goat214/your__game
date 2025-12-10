@@ -1,0 +1,110 @@
+/* Body va container */
+/* Body va html ni to‘liq ekran qilish */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* agar horizontal scroll chiqsa oldini oladi */
+    background: #000; /* asosiy fon rangini moslashtiring */
+}
+
+.home-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top center, #1a1a1a, #000);
+    color: #fff;
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Spotlight effekt */
+  .home-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 50%);
+    transform: rotate(45deg);
+    pointer-events: none;
+    animation: shine 5s linear infinite;
+}
+
+  
+  @keyframes shine {
+    0% { transform: rotate(45deg) translateX(-100%); }
+    50% { transform: rotate(45deg) translateX(100%); }
+    100% { transform: rotate(45deg) translateX(-100%); }
+  }
+  
+  /* Title */
+  .home-title {
+    font-size: 4rem;
+    margin-bottom: 80px;
+    text-shadow: 4px 4px 15px rgba(0,0,0,0.8), 0 0 10px rgba(255, 215, 0, 0.8);
+    letter-spacing: 3px;
+    z-index: 1;
+  }
+  
+  /* Buttons container */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 1;
+  }
+  
+  /* Buttons */
+  .home-btn {
+    background: linear-gradient(145deg, #ffd700, #ff8c00);
+    color: #000;
+    border: 2px solid #ffd700;
+    border-radius: 20px;
+    padding: 25px 80px;
+    font-size: 2rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    text-transform: uppercase;
+  }
+  
+  /* Hover efekt dramatik */
+  .home-btn:hover {
+    transform: scale(1.15) rotate(-1deg);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.9), 0 0 25px rgba(255,215,0,0.7);
+    background: linear-gradient(145deg, #ffea00, #ff6f00);
+  }
+  
+  /* Responsive */
+  @media (max-width: 800px) {
+    .home-title {
+      font-size: 3rem;
+      margin-bottom: 50px;
+    }
+  
+    .home-btn {
+      padding: 20px 60px;
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .home-title {
+      font-size: 2.5rem;
+    }
+  
+    .home-btn {
+      padding: 15px 40px;
+      font-size: 1.3rem;
+    }
+  }
+  

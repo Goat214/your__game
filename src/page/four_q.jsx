@@ -2,32 +2,38 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../css/four_q.css"; // alohida CSS fayl
 
+import geraklImg from "../img/gerakl.jpg";
+
+import yachImg from "../img/OIP.webp";
+import jaguarImg from "../img/jaguar.jfif";
+
 const questions4 = [
   {
     id: 1,
     text: "Древнегреческий герой который совершил двенадцать подвигов?",
     answer: "Геракл",
-    answerImage: "src/img/gerakl.jpg",
+    answerImage: geraklImg,
   },
   {
     id: 2,
     text: "Ни кузнец, ни столяр.\nНи моляр ни плотник,\nА лучший в селе работник.",
     answer: "Конь",
-    answerImage: "src/img/question2.jpg",
+    
   },
   {
     id: 3,
     text: "Кто старший: овес или ячмень?",
     answer: "Ячмень (потому что имеет усы)",
-    answerImage: "src/img/OIP.webp"
+    answerImage: yachImg,
   },
   {
     id: 4,
     text: "Этот пятнистый хищник дал название одному из зарубежных автомобилей?",
     answer: "Ягуар",
-    answerImage: "src/img/jaguar.jfif",
+    answerImage: jaguarImg,
   },
 ];
+
 
 function FourQ() {
   const [selectedQuestion, setSelectedQuestion] = useState(null);

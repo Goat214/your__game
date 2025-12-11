@@ -45,7 +45,7 @@
 }
 
 .threeq-card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 150, 0, 0.85);
   padding: 25px;
   border-radius: 12px;
   font-size: 22px;
@@ -61,6 +61,7 @@
 .threeq-opened {
   border: 3px solid #4ade80;
   color: #4ade80;
+  background: rgba(47, 47, 47, 0.15);
 }
 
 .threeq-opened-label {

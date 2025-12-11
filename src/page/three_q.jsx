@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../css/tree_q.css";
+import ivanKrylovImg from "../img/500px-Ivan_Krylov.jpg";
+import writerPortraitImg from "../img/four__qimg.png";
+import answerQImg from "../img/answerQ.png";
 
 const questions = [
   {
     id: 1,
     text: "Чей это портрет?",
     answer: "И. А. Крылова",
-    image: "src/img/500px-Ivan_Krylov.jpg",
+    image: ivanKrylovImg,
   },
   {
     id: 2,
@@ -22,8 +25,8 @@ const questions = [
   {
     id: 4,
     text: "Узнай писателя по портрету",
-    image: "src/img/four__qimg.png",
-    answerImage: "src/img/answerQ.png",
+    image: writerPortraitImg ,
+    answerImage: answerQImg,
   },
 ];
 
